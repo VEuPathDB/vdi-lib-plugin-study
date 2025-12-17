@@ -17,7 +17,7 @@ usage() unless scalar(@ARGV) == 1;
 
 for my $envVar (@envVars) { die "Missing env variable '$envVar'\n" unless $ENV{$envVar}; }
 
-my $dataFiles = $ENV{DATA_FILES} . '/' . $userDatasetId;
+my $dataFiles = $ENV{DATA_FILES};
 
 my %requiredVars = ('DB_HOST' => $ENV{DB_HOST}, 
                     'DB_PORT' => $ENV{DB_PORT}, 
